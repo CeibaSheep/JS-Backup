@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style rel="stylesheet">
+        ul {
+            list-style: none;
+            margin: 10px auto;
+        }
+        
+        ul li {
+            margin: 20px auto;
+            height: 30;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+        .name {
+            height: 40px;
+            width: 250px;
+            margin: 0 20px;
+            border-radius: 5px;
+            padding-left: 10px;
+            border: 1px solid gainsboro;
+            box-shadow: inset 0 1px 0.5px 0.5px gainsboro;
+        }
+        
+        .verify {
+            color: white;
+            background: rgb(30, 116, 201);
+            width: 60px;
+            height: 40px;
+            border-radius: 3px;
+            border: 1px solid slategray;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .verify:hover {
+            transition: 0.5s transform;
+            transform: scale(1.2, 1.2);
+        }
+        
+        ul li span {
+            margin-left: 60px;
+            color: grey;
+            font-size: 16px;
+        }
+        
+        .error {
+            border: 1px solid red;
+        }
+        
+        .warn {
+            color: red;
+        }
+        
+        .valid {
+            border: 1px solid green;
+        }
+        
+        .info {
+            color: green;
+        }
+    </style>
+    <script src="js/form.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <form action="#">
+            <ul>
+                <li>
+                    <label for="name1">名称<input id="name1" type="text" class="name" placeholder="请输入名称" onfocus="initial(1)"></label>
+                    <input type="submit" id="verify1" value="验证" class="verify" onclick="verifyIpt(1)"><br>
+                    <span>必填，长度为4～16个字符</span>
+                </li>
+                <li>
+                    <label for="name2">名称<input type="text" id="name2" class="name" placeholder="请输入名称" onfocus="initial(2)"></label>
+                    <input type="submit" id="verify2" class="verify" value="验证" onclick="verifyIpt(2)"><br>
+                    <span>请输入名称</span>
+                </li>
+                <li>
+                    <label for="name3">名称<input type="text" id="name3" class="name" placeholder="请输入名称" onfocus="initial(3)"></label>
+                    <input type="submit" id="verify3" class="verify" value="验证" onclick="verifyIpt(3)"><br>
+                    <span>请输入名称</span>
+                </li>
+            </ul>
+
+        </form>
+    </div>
+</body>
+
+</html>

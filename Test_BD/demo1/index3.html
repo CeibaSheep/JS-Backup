@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>form3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .wrap {
+            width: 100%;
+            /* height: 500px; */
+            margin: 0 auto;
+            margin-top: 10%;
+            background: #ddddaa;
+            padding: 50px;
+        }
+        
+        form p {
+            display: inline-block;
+            font-size: 16px;
+            color: #231412;
+            font-weight: bold;
+            margin: 0 50px;
+            /* padding: 0 50px; */
+            line-height: 1.2;
+        }
+        
+        form p input {
+            margin-right: 30px;
+        }
+        
+        .content div {
+            margin: 50px 50px;
+        }
+        
+        .content div select {
+            padding-left: 20px;
+            margin: 0 30px;
+            width: 200px;
+            height: 30px;
+        }
+        
+        .school-list {
+            display: none;
+        }
+        
+        .depart-name {
+            font-size: 16px;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .depart-name input {
+            width: 200px;
+            height: 30px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <form action="">
+            <p><input type="radio" name="type" class="school" value="student">在校生</p>
+            <p><input type="radio" name="type" class="school" value="worker">非在校生</p>
+        </form>
+        <div class="content">
+            <div class="school-list">
+                <span>学校</span>
+                <select class="location">
+                    <option value="null" selected>空</option>
+                    <option value="wuhan">武汉</option>
+                    <option value="xiamen">厦门</option>
+                    <option value="nanjin">南京</option>
+                    <option value="beijing">北京</option>
+                </select>
+                <select class="school-name">
+                    <!-- <option value=""></option>
+                    <option value="da"></option>
+                    <option value="da"></option>         -->
+                </select>
+            </div>
+            <div class="depart-name">
+                <label for="dpt-name">就业单位
+                    <input type="text">
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="form3.js"></script>
+</body>
+
+</html>

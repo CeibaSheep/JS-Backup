@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Verify</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        
+        ul li {
+            margin: 10px 0;
+        }
+        
+        ul li input:not(#btn) {
+            width: 200px;
+            height: 30px;
+        }
+        
+        label:not(.four) {
+            letter-spacing: 30px;
+        }
+        
+        .four input {
+            margin-left: 58px;
+        }
+        
+        ul li span {
+            margin-left: 128px;
+            color: rgb(161, 158, 158);
+        }
+        
+        .btn {
+            width: 60px;
+            height: 40px;
+            line-height: 30px;
+            background: darkseagreen;
+            margin-left: 350px;
+        }
+        
+        .error {
+            border: 1px solid red;
+        }
+        
+        .warn {
+            color: red;
+        }
+        
+        .good {
+            border: 1px solid green;
+        }
+        
+        .wish {
+            color: green;
+        }
+        
+        input:focus {
+            /* border: 1px solid rgba(42, 169, 212, 0.1); */
+            box-shadow: 0.5px 0 0.5px rgba(152, 213, 234, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form">
+        <form action="#">
+            <ul>
+                <li>
+                    <label for="name">名称
+                        <input type="text" id="name" class="ipt1" onblur="verify(1)" onfocus="init(1)"></label><br>
+                    <span></span>
+                </li>
+                <li>
+                    <label for="psd">密码
+                        <input type="text" id="psd" class="ipt2" onblur="verify(2)" onfocus="init(2)">     
+                    </label><br>
+                    <span></span>
+                </li>
+                <li>
+                    <label for="psd1" class="four">密码确认
+                        <input type="text" id="psd1" class="ipt3" onblur="verify(3)" onfocus="init(3)">
+                    </label><br>
+                    <span></span>
+                </li>
+                <li>
+                    <label for="email">邮箱
+                        <input type="text" id="email" class="ipt4" onblur="verify(4)" onfocus="init(4)">
+                    </label><br>
+                    <span></span>
+                </li>
+                <li>
+                    <label for="phone">电话
+                        <input type="text" id="phone" class="ipt5" onblur="verify(5)" onfocus="init(5)">
+                    </label><br>
+                    <span></span>
+                </li>
+            </ul>
+            <input type="submit" name="提交" class="btn" onclick="go()">
+        </form>
+    </div>
+    <script src="form2.js"></script>
+</body>
+
+</html>
